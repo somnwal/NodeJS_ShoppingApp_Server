@@ -35,6 +35,8 @@ export const typeRouter = router({
       id: z.string(),
       name: z.string().optional(),
       description: z.string().optional(),
+      image: z.string().optional(),
+      color: z.string().optional()
     }))
     .mutation(async ({ input }) => {
       const { id, ...updateData } = input;
